@@ -233,7 +233,7 @@ export const Button = React.forwardRef<View, ButtonProps>(
         if (color === 'primary') {
           if (!disabled) {
             baseStyles.push({
-              backgroundColor: t.palette.primary_500,
+              backgroundColor: t.palette.positive_500,
             })
             hoverStyles.push({
               backgroundColor: t.palette.primary_600,
@@ -315,7 +315,7 @@ export const Button = React.forwardRef<View, ButtonProps>(
 
             if (!disabled) {
               baseStyles.push(a.border, {
-                borderColor: t.palette.primary_500,
+                borderColor: t.palette.positive_500,
               })
               hoverStyles.push(a.border, {
                 backgroundColor: t.palette.primary_50,

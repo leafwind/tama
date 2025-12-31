@@ -95,7 +95,7 @@ export function EmojiReactionPicker({
                     ? {
                         backgroundColor: alreadyReacted
                           ? t.palette.negative_100
-                          : t.palette.primary_500,
+                          : t.palette.positive_500,
                       }
                     : alreadyReacted
                       ? {backgroundColor: t.palette.primary_200}

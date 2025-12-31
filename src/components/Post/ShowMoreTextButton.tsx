@@ -43,7 +43,7 @@ export function ShowMoreTextButton({
           style={[
             textStyle,
             {
-              color: t.palette.primary_500,
+              color: t.palette.positive_500,
               opacity: pressed ? 0.6 : 1,
               textDecorationLine: hovered ? 'underline' : undefined,
             },

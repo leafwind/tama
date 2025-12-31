@@ -112,7 +112,7 @@ export function Trigger({children, label}: TriggerProps) {
             borderWidth: 2,
             borderStyle: 'solid',
             borderColor: focused
-              ? t.palette.primary_500
+              ? t.palette.positive_500
               : t.palette.contrast_50,
           },
         ])}>

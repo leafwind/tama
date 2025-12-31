@@ -137,7 +137,7 @@ export function ScreenHider({
                   a.text_lg,
                   a.leading_snug,
                   {
-                    color: t.palette.primary_500,
+                    color: t.palette.positive_500,
                   },
                   web({
                     cursor: 'pointer',

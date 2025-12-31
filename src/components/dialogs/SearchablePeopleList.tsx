@@ -505,7 +505,7 @@ function SearchInput({
       style={[a.flex_row, a.align_center, a.gap_sm]}>
       <Search
         size="md"
-        fill={interacted ? t.palette.primary_500 : t.palette.contrast_300}
+        fill={interacted ? t.palette.positive_500 : t.palette.contrast_300}
       />
 
       <TextInput

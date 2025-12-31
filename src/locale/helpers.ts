@@ -152,93 +152,13 @@ export function sanitizeAppLanguageSetting(appLanguage: string): AppLanguage {
 
   for (const lang of langs) {
     switch (fixLegacyLanguageCode(lang)) {
-      case 'en':
-        return AppLanguage.en
-      case 'an':
-        return AppLanguage.an
-      case 'ast':
-        return AppLanguage.ast
-      case 'ca':
-        return AppLanguage.ca
-      case 'cy':
-        return AppLanguage.cy
-      case 'da':
-        return AppLanguage.da
-      case 'de':
-        return AppLanguage.de
-      case 'el':
-        return AppLanguage.el
-      case 'en-GB':
-        return AppLanguage.en_GB
-      case 'eo':
-        return AppLanguage.eo
-      case 'es':
-        return AppLanguage.es
-      case 'eu':
-        return AppLanguage.eu
-      case 'fi':
-        return AppLanguage.fi
-      case 'fr':
-        return AppLanguage.fr
-      case 'fy':
-        return AppLanguage.fy
-      case 'ga':
-        return AppLanguage.ga
-      case 'gd':
-        return AppLanguage.gd
-      case 'gl':
-        return AppLanguage.gl
-      case 'hi':
-        return AppLanguage.hi
-      case 'hu':
-        return AppLanguage.hu
-      case 'ia':
-        return AppLanguage.ia
-      case 'id':
-        return AppLanguage.id
-      case 'it':
-        return AppLanguage.it
-      case 'ja':
-        return AppLanguage.ja
-      case 'km':
-        return AppLanguage.km
-      case 'ko':
-        return AppLanguage.ko
-      case 'ne':
-        return AppLanguage.ne
-      case 'nl':
-        return AppLanguage.nl
-      case 'pl':
-        return AppLanguage.pl
-      case 'pt-BR':
-        return AppLanguage.pt_BR
-      case 'pt-PT':
-        return AppLanguage.pt_PT
-      case 'ro':
-        return AppLanguage.ro
-      case 'ru':
-        return AppLanguage.ru
-      case 'sv':
-        return AppLanguage.sv
-      case 'th':
-        return AppLanguage.th
-      case 'tr':
-        return AppLanguage.tr
-      case 'uk':
-        return AppLanguage.uk
-      case 'vi':
-        return AppLanguage.vi
-      case 'zh-Hans-CN':
-        return AppLanguage.zh_CN
-      case 'zh-Hant-HK':
-        return AppLanguage.zh_HK
       case 'zh-Hant-TW':
         return AppLanguage.zh_TW
       default:
         continue
     }
   }
-  return AppLanguage.en
+  return AppLanguage.zh_TW
 }
 
 /**
@@ -267,7 +187,7 @@ export function fixLegacyLanguageCode(code: string | null): string | null {
  * Find the first language supported by our translation infra. Values should be
  * in order of preference, and match the values of {@link AppLanguage}.
  *
- * If no match, returns `en`.
+ * If no match, returns `zh-TW`.
  */
 export function findSupportedAppLanguage(languageTags: (string | undefined)[]) {
   const supported = new Set(Object.values(AppLanguage))
@@ -277,7 +197,7 @@ export function findSupportedAppLanguage(languageTags: (string | undefined)[]) {
       return tag
     }
   }
-  return AppLanguage.en
+  return AppLanguage.zh_TW
 }
 
 /**

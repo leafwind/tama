@@ -720,11 +720,11 @@ export function ProfileGrid({
               <Text
                 style={[
                   a.text_sm,
-                  {color: t.palette.primary_500},
+                  {color: t.palette.positive_500},
                   hovered &&
                     web({
                       textDecorationLine: 'underline',
-                      textDecorationColor: t.palette.primary_500,
+                      textDecorationColor: t.palette.positive_500,
                     }),
                 ]}>
                 <Trans>See more</Trans>

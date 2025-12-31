@@ -616,12 +616,12 @@ function StepTitle({
             width: 24,
             height: 24,
             backgroundColor: active
-              ? t.palette.primary_500
+              ? t.palette.positive_500
               : completed
                 ? t.palette.primary_100
                 : t.atoms.bg_contrast_25.backgroundColor,
             borderColor: active
-              ? t.palette.primary_500
+              ? t.palette.positive_500
               : completed
                 ? t.palette.primary_400
                 : t.atoms.border_contrast_low.borderColor,

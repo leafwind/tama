@@ -100,7 +100,7 @@ export function MessagesListBlockedFooter({
             size="small"
             style={[a.flex_1]}
             onPress={onUnblockPress}>
-            <ButtonText style={{color: t.palette.primary_500}}>
+            <ButtonText style={{color: t.palette.positive_500}}>
               <Trans>Unblock</Trans>
             </ButtonText>
           </Button>
@@ -115,7 +115,7 @@ export function MessagesListBlockedFooter({
             size="small"
             style={[a.flex_1]}
             onPress={onUnblockPress}>
-            <ButtonText style={{color: t.palette.primary_500}}>
+            <ButtonText style={{color: t.palette.positive_500}}>
               <Trans>Unblock</Trans>
             </ButtonText>
           </Button>

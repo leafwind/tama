@@ -34,7 +34,7 @@ export function IconCircle({
         },
         style,
       ]}>
-      <Icon size={size} style={[{color: t.palette.primary_500}, iconStyle]} />
+      <Icon size={size} style={[{color: t.palette.positive_500}, iconStyle]} />
     </View>
   )
 }
