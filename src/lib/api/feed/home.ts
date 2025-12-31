@@ -45,6 +45,8 @@ export class HomeFeedAPI implements FeedAPI {
     this.discover = new CustomFeedAPI({
       agent,
       feedParams: {
+        // We ran out of posts from your follows. Here's the latest from
+        // 預設的 fallback feed
         feed: 'at://did:plc:nlkgxuj2udf4otr3gf7hjghl/app.bsky.feed.generator/aaagrwkrljyvk',
       },
     })
@@ -56,6 +58,8 @@ export class HomeFeedAPI implements FeedAPI {
     this.discover = new CustomFeedAPI({
       agent: this.agent,
       feedParams: {
+        // We ran out of posts from your follows. Here's the latest from
+        // 預設的 fallback feed
         feed: 'at://did:plc:nlkgxuj2udf4otr3gf7hjghl/app.bsky.feed.generator/aaagrwkrljyvk',
       },
       userInterests: this.userInterests,

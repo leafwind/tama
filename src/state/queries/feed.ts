@@ -325,7 +325,14 @@ export function useGetPopularFeedsQuery(options?: GetPopularFeedsOptions) {
     }
   }, [query, limit])
 
-  return query
+  // TODO: 暫時停用 popular feeds
+  return {
+    ...query,
+    data: {
+      pages: [],
+      pageParams: [],
+    },
+  }
 }
 
 export function useSearchPopularFeedsMutation() {
