@@ -326,9 +326,6 @@ export function useGetPopularFeedsQuery(options?: GetPopularFeedsOptions) {
   }, [query, limit])
 
   // TODO: 暫時停用 popular feeds，只返回指定的 feed
-  const specificFeedUri =
-    'at://did:plc:nlkgxuj2udf4otr3gf7hjghl/app.bsky.feed.generator/aaagrwkrljyvk'
-
   if (query.data) {
     return {
       ...query,
@@ -337,16 +334,31 @@ export function useGetPopularFeedsQuery(options?: GetPopularFeedsOptions) {
           {
             feeds: [
               {
-                uri: specificFeedUri,
+                uri: 'at://did:plc:nlkgxuj2udf4otr3gf7hjghl/app.bsky.feed.generator/aaagrwkrljyvk',
                 cid: '',
                 creator: {
                   did: 'did:plc:nlkgxuj2udf4otr3gf7hjghl',
                   handle: 'leafwind.tw',
                   displayName: 'SkyFeed',
-                  avatar: '',
+                  avatar:
+                    'https://cdn.bsky.app/img/avatar_thumbnail/plain/did:plc:nlkgxuj2udf4otr3gf7hjghl/bafkreihprea3tec4aayipsx3mjeruo2s4pe6id6tih6rpnyrk5rsgkimmi@jpeg',
                 },
-                displayName: '測試',
-                description: '描述',
+                displayName: '實況與創作',
+                description: 'leafwind 維護的演算法 Feed (alpha)',
+                likeCount: 0,
+              },
+              {
+                uri: 'at://did:plc:nlkgxuj2udf4otr3gf7hjghl/app.bsky.feed.generator/aaahhfaqsqlpy',
+                cid: '',
+                creator: {
+                  did: 'did:plc:nlkgxuj2udf4otr3gf7hjghl',
+                  handle: 'leafwind.tw',
+                  displayName: 'SkyFeed',
+                  avatar:
+                    'https://cdn.bsky.app/img/avatar_thumbnail/plain/did:plc:nlkgxuj2udf4otr3gf7hjghl/bafkreihcm75jcl2j7nmewhlxq6u6wkcibz5272npzuxsreph5s4y7s42gu@jpeg',
+                },
+                displayName: '繁體中文',
+                description: 'leafwind 自製的繁體中文 feed',
                 likeCount: 0,
               },
             ],
