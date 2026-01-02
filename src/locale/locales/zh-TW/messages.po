@@ -124,7 +124,7 @@ msgstr "{0, plural, one {則轉發} other {則轉發}}"
 msgid "{0, plural, one {save} other {saves}}"
 msgstr "{0, plural, one {個收藏} other {個收藏}}"
 
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:112
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:106
 msgid "{0, plural, other {{1} posts}}"
 msgstr "{0, plural, other {{1} 則貼文}}"
 
@@ -453,12 +453,12 @@ msgid "{profileName} joined Bluesky using a starter pack {timeAgoString} ago"
 msgstr "「{profileName}」在 {timeAgoString}前使用新手包加入了 Bluesky"
 
 #. The trending topic rank, i.e. "1. March Madness", "2. The Bachelor"
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:141
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:135
 msgid "{rank}."
 msgstr "{rank}."
 
 #. trending topic time spent trending. should be as short as possible to fit in a pill
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:233
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:227
 msgid "{type}h ago"
 msgstr "{type} 小時前"
 
@@ -1685,7 +1685,7 @@ msgstr "瀏覽帶有標籤 {displayName} 的貼文"
 msgid "Browse starter pack {displayName}"
 msgstr "瀏覽新手包 {displayName}"
 
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:123
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:117
 msgid "Browse topic {0}"
 msgstr "瀏覽話題 {0}"
 
@@ -3479,7 +3479,7 @@ msgstr "輸入您的用戶名稱和密碼"
 msgid "Enters full screen"
 msgstr "進入全螢幕"
 
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:266
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:260
 msgid "Entertainment"
 msgstr "娛樂"
 
@@ -4722,7 +4722,7 @@ msgstr "主機："
 msgid "Hosting provider"
 msgstr "託管服務提供者"
 
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:221
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:215
 msgid "Hot"
 msgstr "熱門"
 
@@ -5882,7 +5882,7 @@ msgstr "需要檢舉侵害著作權、法律要求，或合規性問題嗎？"
 msgid "Nevermind, create a handle for me"
 msgstr "算了，為我建立一個帳號代碼"
 
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:226
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:220
 msgid "New"
 msgstr "最新"
 
@@ -5990,7 +5990,7 @@ msgid "Newest replies first"
 msgstr "最新回覆優先"
 
 #: src/lib/interests.ts:67
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:268
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:262
 msgid "News"
 msgstr "新聞"
 
@@ -6983,7 +6983,7 @@ msgid "Please write your message below:"
 msgstr "請在下列欄位填寫您的訊息："
 
 #: src/lib/interests.ts:70
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:262
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:256
 msgid "Politics"
 msgstr "政治"
 
@@ -8946,7 +8946,7 @@ msgid "Spam or other inauthentic behavior or deception"
 msgstr "垃圾內容或其他虛假互動行為"
 
 #: src/lib/interests.ts:72
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:260
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:254
 msgid "Sports"
 msgstr "運動"
 
@@ -10473,7 +10473,7 @@ msgid "Video from {0}: {text}"
 msgstr "影片來自 {0}：{text}"
 
 #: src/lib/interests.ts:62
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:264
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:258
 msgid "Video Games"
 msgstr "電子遊戲"
 
@@ -11611,11 +11611,11 @@ msgid "Your verifications"
 msgstr "您的驗證"
 
 #: src/screens/Search/modules/ExploreRecommendations.tsx:59
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:58
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:52
 msgid "目前還沒有繁體中文趨勢主題，敬請期待。"
 msgstr ""
 
 #: src/screens/Search/modules/ExploreRecommendations.tsx:55
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:54
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:48
 msgid "趨勢"
 msgstr ""
