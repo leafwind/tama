@@ -31,6 +31,30 @@ export function ExploreTrendingTopics() {
 function Inner() {
   const {data: trending, error, isLoading, isRefetching} = useGetTrendsQuery()
   const noTopics = !isLoading && !error && !trending?.trends?.length
+  const t = useTheme()
+
+  // TODO: /search 頁面[您感興趣的主題]暫時移除趨勢顯示，等待自定義中文趨勢完成
+  if (noTopics || (trending && trending.trends.length === 0)) {
+    return (
+      <View style={[a.px_lg, a.py_lg, a.border_b, t.atoms.border_contrast_low]}>
+        <View style={[a.gap_sm]}>
+          <View style={[a.flex_row, a.align_center, a.gap_sm]}>
+            <FlameIcon
+              size="lg"
+              fill={t.palette.primary_500}
+              style={{marginLeft: -2}}
+            />
+            <Text style={[a.text_2xl, a.font_bold, t.atoms.text]}>
+              <Trans>趨勢</Trans>
+            </Text>
+          </View>
+          <Text style={[t.atoms.text_contrast_high, a.leading_snug]}>
+            <Trans>目前還沒有繁體中文趨勢主題，敬請期待。</Trans>
+          </Text>
+        </View>
+      </View>
+    )
+  }
 
   return isLoading || isRefetching ? (
     Array.from({length: TOPIC_COUNT}).map((__, i) => (

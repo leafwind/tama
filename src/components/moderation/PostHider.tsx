@@ -133,7 +133,7 @@ export function PostHider({
         {desc.name}
       </Text>
       {!modui.noOverride && (
-        <Text style={[{color: t.palette.primary_500}]}>
+        <Text style={[{color: t.palette.positive_500}]}>
           {override ? <Trans>Hide</Trans> : <Trans>Show</Trans>}
         </Text>
       )}

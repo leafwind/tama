@@ -32,6 +32,37 @@ function Inner() {
   const noRecs = !isLoading && !error && !trending?.suggested?.length
   const allFeeds = trending?.suggested && isAllFeeds(trending.suggested)
 
+  // TODO: 暫時移除趨勢顯示，等待自定義中文趨勢完成
+  if (noRecs || (trending && trending.suggested.length === 0)) {
+    return (
+      <View
+        style={[
+          a.flex_row,
+          isWeb
+            ? [a.px_lg, a.py_lg, a.pt_2xl, a.gap_md]
+            : [a.p_lg, a.pt_2xl, a.gap_md],
+          a.border_b,
+          t.atoms.border_contrast_low,
+        ]}>
+        <View style={[a.flex_1, a.gap_sm]}>
+          <View style={[a.flex_row, a.align_center, a.gap_sm]}>
+            <Hashtag_Stroke2_Corner0_Rounded
+              size="lg"
+              fill={t.palette.primary_500}
+              style={{marginLeft: -2}}
+            />
+            <Text style={[a.text_2xl, a.font_bold, t.atoms.text]}>
+              <Trans>趨勢</Trans>
+            </Text>
+          </View>
+          <Text style={[t.atoms.text_contrast_high, a.leading_snug]}>
+            <Trans>目前還沒有繁體中文趨勢主題，敬請期待。</Trans>
+          </Text>
+        </View>
+      </View>
+    )
+  }
+
   return error || noRecs ? null : (
     <>
       <View

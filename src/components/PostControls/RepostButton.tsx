@@ -156,7 +156,7 @@ let RepostButtonDialogInner = ({
             size="large"
             variant="ghost"
             color="primary">
-            <RepostIcon size="lg" fill={t.palette.primary_500} />
+            <RepostIcon size="lg" fill={t.palette.positive_500} />
             <Text style={[a.font_semi_bold, a.text_xl]}>
               {isReposted ? (
                 <Trans>Remove repost</Trans>
@@ -183,7 +183,7 @@ let RepostButtonDialogInner = ({
               fill={
                 embeddingDisabled
                   ? t.atoms.text_contrast_low.color
-                  : t.palette.primary_500
+                  : t.palette.positive_500
               }
             />
             <Text

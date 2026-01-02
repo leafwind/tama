@@ -34,7 +34,7 @@ export function Icon() {
   }[type]
   const fill = {
     info: t.atoms.text_contrast_medium.color,
-    tip: t.palette.primary_500,
+    tip: t.palette.positive_500,
     warning: colors.warning,
     error: t.palette.negative_500,
     apology: t.atoms.text_contrast_medium.color,
@@ -109,7 +109,7 @@ export function Outer({
   const {gtMobile} = useBreakpoints()
   const borderColor = {
     info: t.atoms.border_contrast_high.borderColor,
-    tip: t.palette.primary_500,
+    tip: t.palette.positive_500,
     warning: colors.warning,
     error: t.palette.negative_500,
     apology: t.atoms.border_contrast_high.borderColor,

@@ -1,0 +1,27 @@
+{
+  "rewrites": [
+    {
+      "source": "/gate/:path*",
+      "destination": "https://bsky.app/gate/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    }
+  ],
+  "installCommand": "yarn install",
+  "buildCommand": "yarn intl:extract:all && yarn intl:compile && yarn build-web",
+  "outputDirectory": "web-build",
+  "framework": null
+}

@@ -351,7 +351,7 @@ export function ItemRadio({selected}: {selected: boolean}) {
             {height: 14, width: 14},
             selected
               ? {
-                  backgroundColor: t.palette.primary_500,
+                  backgroundColor: t.palette.positive_500,
                 }
               : {},
           ]}

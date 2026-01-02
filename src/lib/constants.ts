@@ -39,6 +39,14 @@ export const DISCOVER_DEBUG_DIDS: Record<string, true> = {
   'did:plc:2dzyut5lxna5ljiaasgeuffz': true, // darrin.bsky.team
 }
 
+// 自定義 feeds
+export const CUSTOM_FEEDS = {
+  liveStreamAndCreator:
+    'at://did:plc:nlkgxuj2udf4otr3gf7hjghl/app.bsky.feed.generator/aaagrwkrljyvk',
+  traditionalChinese:
+    'at://did:plc:nlkgxuj2udf4otr3gf7hjghl/app.bsky.feed.generator/aaahhfaqsqlpy',
+}
+
 const BASE_FEEDBACK_FORM_URL = `${HELP_DESK_URL}/requests/new`
 export function FEEDBACK_FORM_URL({
   email,
@@ -138,7 +146,7 @@ export const BSKY_FEED_OWNER_DIDS = [
 ]
 
 export const DISCOVER_FEED_URI =
-  'at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.generator/whats-hot'
+  'at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.generator/thevids'
 export const VIDEO_FEED_URI =
   'at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.generator/thevids'
 export const STAGING_VIDEO_FEED_URI =

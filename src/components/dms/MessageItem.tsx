@@ -197,7 +197,7 @@ let MessageItem = ({
                     backgroundColor: isFromSelf
                       ? isPending
                         ? pendingColor
-                        : t.palette.primary_500
+                        : t.palette.positive_500
                       : t.palette.contrast_50,
                     borderRadius: 17,
                   },

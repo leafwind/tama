@@ -240,7 +240,7 @@ function ContentHiderActive({
               )}{' '}
               <Text
                 style={[
-                  {color: t.palette.primary_500},
+                  {color: t.palette.positive_500},
                   a.text_sm,
                   state.hovered && [web({textDecoration: 'underline'})],
                 ]}>

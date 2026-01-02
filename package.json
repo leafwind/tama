@@ -19,6 +19,7 @@
     }
   },
   "scripts": {
+    "check-size": "echo \"Total:\" && du -sh web-build && echo \"JS bundles:\" && find web-build -name \"*.js\" -exec ls -lh {} \\; | awk '{print $5, $9}'",
     "prepare": "is-ci || husky install",
     "postinstall": "patch-package && yarn intl:compile-if-needed",
     "prebuild": "EXPO_NO_GIT_STATUS=1 expo prebuild --clean",
@@ -226,7 +227,6 @@
     "zod": "^3.20.2"
   },
   "devDependencies": {
-    "@atproto/dev-env": "^0.3.196",
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
     "@babel/runtime": "^7.26.0",

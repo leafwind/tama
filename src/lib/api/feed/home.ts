@@ -1,6 +1,6 @@
 import {type AppBskyFeedDefs, type BskyAgent} from '@atproto/api'
 
-import {PROD_DEFAULT_FEED} from '#/lib/constants'
+import {CUSTOM_FEEDS} from '#/lib/constants'
 import {CustomFeedAPI} from './custom'
 import {FollowingFeedAPI} from './following'
 import {type FeedAPI, type FeedAPIResponse} from './types'
@@ -33,6 +33,10 @@ export class HomeFeedAPI implements FeedAPI {
   usingDiscover = false
   itemCursor = 0
   userInterests?: string
+  // /home: We ran out of posts from your follows. Here's the latest from
+  // 預設的 fallback feed，覆蓋掉原本的 discover feed
+  private static readonly LIVE_STREAM_AND_CREATOR_FEED =
+    CUSTOM_FEEDS.liveStreamAndCreator
 
   constructor({
     userInterests,
@@ -45,7 +49,9 @@ export class HomeFeedAPI implements FeedAPI {
     this.following = new FollowingFeedAPI({agent})
     this.discover = new CustomFeedAPI({
       agent,
-      feedParams: {feed: PROD_DEFAULT_FEED('whats-hot')},
+      feedParams: {
+        feed: HomeFeedAPI.LIVE_STREAM_AND_CREATOR_FEED,
+      },
     })
     this.userInterests = userInterests
   }
@@ -54,7 +60,9 @@ export class HomeFeedAPI implements FeedAPI {
     this.following = new FollowingFeedAPI({agent: this.agent})
     this.discover = new CustomFeedAPI({
       agent: this.agent,
-      feedParams: {feed: PROD_DEFAULT_FEED('whats-hot')},
+      feedParams: {
+        feed: HomeFeedAPI.LIVE_STREAM_AND_CREATOR_FEED,
+      },
       userInterests: this.userInterests,
     })
     this.usingDiscover = false
