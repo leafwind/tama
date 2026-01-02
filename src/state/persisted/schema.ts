@@ -141,11 +141,11 @@ export const defaults: Schema = {
     lastEmailConfirm: undefined,
   },
   languagePrefs: {
-    primaryLanguage: deviceLanguageCodes[0] || 'zh_TW',
-    contentLanguages: deviceLanguageCodes || [],
-    postLanguage: deviceLanguageCodes[0] || 'zh_TW',
+    primaryLanguage: deviceLanguageCodes[0] || 'zh',
+    contentLanguages: deviceLanguageCodes || ['zh'],
+    postLanguage: deviceLanguageCodes[0] || 'zh',
     postLanguageHistory: (deviceLanguageCodes || [])
-      .concat(['en', 'ja', 'pt', 'de'])
+      .concat(['en', 'ja'])
       .slice(0, 6),
     // try full language tag first, then fallback to language code
     appLanguage: findSupportedAppLanguage([
