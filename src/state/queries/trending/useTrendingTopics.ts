@@ -4,7 +4,7 @@ import {useQuery} from '@tanstack/react-query'
 
 import {STALE} from '#/state/queries'
 import {usePreferencesQuery} from '#/state/queries/preferences'
-// import {useAgent} from '#/state/session'
+import {useAgent} from '#/state/session'
 
 export type TrendingTopic = AppBskyUnspeccedDefs.TrendingTopic
 
@@ -18,7 +18,7 @@ export const DEFAULT_LIMIT = 14
 export const trendingTopicsQueryKey = ['trending-topics']
 
 export function useTrendingTopics() {
-  // const agent = useAgent()
+  const agent = useAgent()
   const {data: preferences} = usePreferencesQuery()
   const mutedWords = React.useMemo(() => {
     return preferences?.moderationPrefs?.mutedWords || []
@@ -29,20 +29,12 @@ export function useTrendingTopics() {
     staleTime: STALE.MINUTES.THREE,
     queryKey: trendingTopicsQueryKey,
     async queryFn() {
-      // TODO: 暫時移除趨勢，因為官方 trending feed 只提供英文內容
-      // 等待自定義中文趨勢 feed 完成後再啟用
-      // const {data} = await agent.api.app.bsky.unspecced.getTrendingTopics({
-      //   limit: DEFAULT_LIMIT,
-      // })
-      // return {
-      //   topics: data.topics ?? [],
-      //   suggested: data.suggested ?? [],
-      // }
-
-      // 返回空 list，前端會顯示「目前還沒有繁中趨勢」
+      const {data} = await agent.api.app.bsky.unspecced.getTrendingTopics({
+        limit: DEFAULT_LIMIT,
+      })
       return {
-        topics: [],
-        suggested: [],
+        topics: data.topics ?? [],
+        suggested: data.suggested ?? [],
       }
     },
     select: React.useCallback(
